@@ -10,11 +10,11 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <meta
-          name="og:description"
-          content="Do you want to know who i am? please don't.."
-        />
-        <meta name="og:title" content="Hafizh RF" />
+        <meta property="og:title" content="Hafizhrf" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hafizhrf.vercel.app/" />
+        <meta property="og:image" content="https://avatars3.githubusercontent.com/u/52806525" />
+        <meta property="og:description" content="Do you want to know who i am?" />
       </Head>
       <main>{children}</main>
     </div>
