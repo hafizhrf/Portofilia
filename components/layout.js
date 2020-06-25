@@ -15,6 +15,8 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content="https://hafizhrf.vercel.app/" />
         <meta property="og:image" content="https://avatars3.githubusercontent.com/u/52806525" />
         <meta property="og:description" content="Do you want to know who i am?" />
+        <meta property="og:site_name" content="Hafizh Rifqi Fabian"></meta>
+        <meta property="og:updated_time" content="1440432930" />
       </Head>
       <main>{children}</main>
     </div>
