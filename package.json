@@ -10,6 +10,15 @@
   "dependencies": {
     "next": "9.3.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-animation": "^1.2.2",
+    "react-dom": "16.13.1",
+    "react-fade-in": "^1.1.0",
+    "react-grid-system": "^7.0.3",
+    "react-responsive-carousel": "^3.2.8",
+    "react-scroll-trigger": "^0.6.3",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^1.2.1",
+    "react-typing-animation": "^1.6.2",
+    "react-typist": "^2.0.5"
   }
 }

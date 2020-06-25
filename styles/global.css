@@ -1,27 +1,96 @@
 html,
 body {
-  padding: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
+  background: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  overflow: hidden;
+  background-color: #f0f0f0;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+.firstHeading{
+  font-size: 24px;
+  margin-top: 80px;
+  letter-spacing: 4px;
 }
 
-a:hover {
-  text-decoration: underline;
+.firstBlack {
+  height: 50000px;
+  padding: 50px;
+  color: #f0f0f0;
+  padding-bottom: 200px;
+  background-color: Black;
+}
+a{
+  color: white;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.script-box {
+  will-change: width, height, left, top;
+  position: relative;
+}
+
+.imgproject{
+  width: 500px;
+  margin-top: 100px;
+  border: 10px solid white;
+  border-radius: 20px;
+}
+.trails-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+}
+
+.trails-text {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: black;
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.trails-text-black {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.trails-text > div {
+  overflow: hidden;
 }
