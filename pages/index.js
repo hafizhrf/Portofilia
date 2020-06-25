@@ -10,9 +10,9 @@ export default function Home() {
       </Head>
       <div>
         <h4>Hi There!</h4>
-        <div>Vtubers Enthusiast & Degenerate Weebs here!</div>
+        <div>Vtubers Enthusiast & Degenerate Weeb here!</div>
         <span>I code for money :D</span>
-        <div>Also my github <a href="https://www.github.com/hafizhrf">here</a></div>
+        <div>Also my <a href="https://www.github.com/hafizhrf">github</a></div>
       </div>
     </Layout>
   )
