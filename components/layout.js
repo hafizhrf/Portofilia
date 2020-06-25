@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <meta
-          name="description"
+          name="og:description"
           content="Do you want to know who i am? please don't.."
         />
         <meta name="og:title" content="Hafizh RF" />
