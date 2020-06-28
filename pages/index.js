@@ -16,6 +16,7 @@ const config = { mass: 5, tension: 2000, friction: 200 }
 export default function Home() {
   const [toggle, set] = useState(false)
   const [toggle2, set2] = useState(false)
+  const [next1, setNext1] = useState(false)
   const [page, setPage] = useState(1)
   const trail = useTrail(items.length, {
     config,
@@ -38,12 +39,16 @@ export default function Home() {
       set(true)
     }, 300);
     setTimeout(() => {
-      setPage(2)
-      setTimeout(() => {
-        set2(true)
-      }, 600);
-    }, 6600);
+      setNext1(true)
+    }, 12000);
   }, []);
+
+  const goToPage2 = () => {
+    setPage(2)
+    setTimeout(() => {
+      set2(true)
+    }, 600);
+  }
 
   return (
     <div>
@@ -65,11 +70,22 @@ export default function Home() {
             </div> 
           </div>
           <div className="firstHeading">
-            <Typist startDelay="800"> 
-              Vtubers Enthusiast & Degenerate Weeb
-              <Typist.Backspace count={4} delay={200} />
-              Normie here!
+            <Typist startDelay={800}> 
+              Hi i'm Hafizh!
+              <Typist.Backspace count={14} delay={500} />
+              Weeb & Vtubers Enthusiast
+              <Typist.Backspace count={25} delay={500} />
+              And I code for money :D
+              <Typist.Backspace count={23} delay={500} />
+              Nice to meet you!
             </Typist>
+            {next1 && (
+              <FadeIn>
+                <div style={{marginTop: '40px'}}>
+                  <a className="button-black" onClick={goToPage2}>next</a>
+                </div>
+              </FadeIn>
+            )}
           </div>
         </div>
       )}
@@ -83,11 +99,12 @@ export default function Home() {
                   <animated.div style={{ height }}>Projects</animated.div>
                 </animated.div>
               ))}
-              <FadeIn delay="600">
+              <FadeIn delay={600}>
                 <div className="firstHeading">
-                  <Typist startDelay="800"> 
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                  </Typist>
+                  Check my GitHub
+                  <div style={{marginTop: '40px'}}>
+                    <a className="button-white" target="__blank" href="https://github.com/hafizhrf">here</a>
+                  </div>
                 </div>
               </FadeIn>
         </div>

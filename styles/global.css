@@ -38,6 +38,34 @@ a{
   color: white;
 }
 
+.button-white{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 200ms;
+}
+
+.button-white:hover {
+  padding-right: 40px;
+  margin-left: 8px;
+}
+
+.button-black{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 200ms;
+}
+
+.button-black:hover {
+  padding-right: 40px;
+  margin-left: 8px;
+}
+
 #root {
   width: 100%;
   height: 100%;
