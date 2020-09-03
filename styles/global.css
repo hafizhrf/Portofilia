@@ -21,7 +21,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.firstHeading{
+.firstHeading {
   font-size: 24px;
   margin-top: 80px;
   letter-spacing: 4px;
@@ -34,11 +34,12 @@ body {
   padding-bottom: 200px;
   background-color: Black;
 }
-a{
+
+a {
   color: white;
 }
 
-.button-white{
+.button-white {
   background-color: white;
   color: black;
   padding: 10px;
@@ -53,7 +54,7 @@ a{
   margin-left: 8px;
 }
 
-.button-black{
+.button-black {
   background-color: black;
   color: white;
   padding: 10px;
@@ -78,12 +79,13 @@ a{
   position: relative;
 }
 
-.imgproject{
+.imgproject {
   width: 500px;
   margin-top: 100px;
   border: 10px solid white;
   border-radius: 20px;
 }
+
 .trails-main {
   position: relative;
   width: 100%;
@@ -120,6 +122,79 @@ a{
   overflow: hidden;
 }
 
-.trails-text > div {
+.trails-text>div {
   overflow: hidden;
+}
+
+.circle-black-big {
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  animation-duration: 4s;
+  background-color: black;
+  position: absolute;
+  right: 200px;
+  top: 200px;
+}
+
+.circle-black-medium {
+  border-radius: 100%;
+  animation-duration: 5s;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  position: absolute;
+  right: 600px;
+  top: 100px;
+}
+
+.circle-black-small {
+  border-radius: 100%;
+  width: 80px;
+  animation-duration: 3s;
+  height: 80px;
+  background-color: black;
+  position: absolute;
+  right: 400px;
+  top: 700px;
+}
+
+.floating1{
+  animation-name: floating1;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.floating2{
+  animation-name: floating2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating1 {
+  from {
+    transform: translate(0, -0px);
+  }
+
+  65% {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating2 {
+  from {
+    transform: translate(0, -0px);
+  }
+
+  65% {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
 }
