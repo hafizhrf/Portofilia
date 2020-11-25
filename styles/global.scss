@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 html,
 body {
   width: 100%;
@@ -17,7 +19,6 @@ body {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  overflow: hidden;
   background-color: #f0f0f0;
 }
 
@@ -25,6 +26,7 @@ body {
   font-size: 24px;
   margin-top: 80px;
   letter-spacing: 4px;
+  margin-bottom: 80px;
 }
 
 .firstBlack {
@@ -32,12 +34,10 @@ body {
   padding: 50px;
   color: #f0f0f0;
   padding-bottom: 200px;
-  background-color: Black;
+  background-color: rgb(66, 66, 66);
+  ;
 }
 
-a {
-  color: white;
-}
 
 .button-white {
   background-color: white;
@@ -55,7 +55,8 @@ a {
 }
 
 .button-black {
-  background-color: black;
+  background-color: rgb(66, 66, 66);
+  ;
   color: white;
   padding: 10px;
   text-decoration: none;
@@ -100,7 +101,8 @@ a {
   width: 100%;
   height: 80px;
   line-height: 80px;
-  color: black;
+  color: rgb(66, 66, 66);
+  ;
   font-size: 5em;
   font-weight: 800;
   text-transform: uppercase;
@@ -131,7 +133,8 @@ a {
   width: 400px;
   height: 400px;
   animation-duration: 4s;
-  background-color: black;
+  background-color: rgb(66, 66, 66);
+  ;
   position: absolute;
   right: 200px;
   top: 200px;
@@ -142,9 +145,10 @@ a {
   animation-duration: 5s;
   width: 200px;
   height: 200px;
-  background-color: black;
+  background-color: rgb(66, 66, 66);
+  ;
   position: absolute;
-  right: 600px;
+  right: 200px;
   top: 100px;
 }
 
@@ -153,19 +157,20 @@ a {
   width: 80px;
   animation-duration: 3s;
   height: 80px;
-  background-color: black;
+  background-color: rgb(66, 66, 66);
+  ;
   position: absolute;
   right: 400px;
   top: 700px;
 }
 
-.floating1{
+.floating1 {
   animation-name: floating1;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
-.floating2{
+.floating2 {
   animation-name: floating2;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -197,4 +202,51 @@ a {
   to {
     transform: translate(0, -0px);
   }
+}
+
+.logo {
+  width: 200px !important;
+  border-radius: 400px;
+  background-color: rgb(66, 66, 66);
+}
+
+.card {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.nav{
+  width: 100%;
+  border-bottom: none !important;
+}
+
+.tabs .nav-link.active {
+  border: 0px;
+  border-bottom-width: 3px !important;
+  border-bottom-color: #rgb(66, 66, 66) !important;
+  border-bottom-style: solid !important;
+
+  font-size: 17px;
+  /* font-weight: bolder; */
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: #0f2236;
+}
+.tabs .nav-link {
+  border: 0px;
+  font-size: 17px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: #9ca4ac;
 }
