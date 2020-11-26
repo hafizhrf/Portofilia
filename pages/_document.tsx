@@ -57,7 +57,6 @@ class MyDocument extends Document {
           <meta property="og:description" content="Do you want to know who i am?" />
           <meta property="og:site_name" content="Hafizh Rifqi Fabian"></meta>
           <meta property="og:updated_time" content="1440432930" />
-          <title>Hafizh RF</title>
         </Head>
         <body>
           <Main />
