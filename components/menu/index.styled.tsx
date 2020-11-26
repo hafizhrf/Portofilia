@@ -22,8 +22,10 @@ const MenuOverlay = styled.div`
   }
 
   @media (max-width: 992px) {
-    top: 20px;
-    left: 42%;
+    right: 8px;
+    bottom: 8px;
+    left: unset;
+    top: unset;
   }
 `
 
@@ -36,8 +38,12 @@ const MenuContainer = styled.div`
   z-index: 10;
 
   @media (max-width: 992px) {
-    width: 100%;
-    height: 52px;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    bottom: 0;
+    top: unset;
+    border-top-left-radius: 100%;
   }
 `
 
@@ -48,8 +54,10 @@ const MenuContent = styled.div`
   left: 100px;
 
   @media (max-width: 992px) {
-    top: 104px;
-    left: 44%;
+    right: 18px;
+    bottom: 72px;
+    left: unset;
+    top: unset;
     flex-direction: column;
   }
 `
