@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface Props {
+  visibility?: boolean
+}
+
 const MenuOverlay = styled.div`
   position: fixed;
   top: 46%;
@@ -7,7 +11,7 @@ const MenuOverlay = styled.div`
   padding: 20px;
   border-radius: 50%;
   background: black;
-  color: white;
+  color: #f8e775;
   cursor: pointer;
   z-index: 11;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -19,7 +23,7 @@ const MenuOverlay = styled.div`
 
   @media (max-width: 992px) {
     top: 20px;
-    left: 46%;
+    left: 42%;
   }
 `
 
@@ -28,7 +32,7 @@ const MenuContainer = styled.div`
   height: 100%;
   width: 52px;
   top: 0;
-  background: lightgrey;
+  background: #f8e775;
   z-index: 10;
 
   @media (max-width: 992px) {
@@ -37,4 +41,40 @@ const MenuContainer = styled.div`
   }
 `
 
-export { MenuOverlay, MenuContainer }
+const MenuContent = styled.div`
+  display: flex;
+  position: fixed;
+  top: 46.8%;
+  left: 100px;
+
+  @media (max-width: 992px) {
+    top: 104px;
+    left: 44%;
+    flex-direction: column;
+  }
+`
+
+const ContentButton = styled.div`
+  font-size: 12px;
+  margin-right: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 12px;
+  color: #3b3b3b;
+  transition: ease-in-out 0.2s;
+  border-radius: 50%;
+  cursor: pointer;
+  display: ${({ visibility = true }: Props) => (visibility ? 'block' : 'none')};
+
+  &:hover {
+    color: #f8e775;
+  }
+
+  @media (max-width: 992px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`
+
+export { MenuOverlay, MenuContainer, MenuContent, ContentButton }
