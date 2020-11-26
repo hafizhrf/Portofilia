@@ -6,9 +6,7 @@ const Skills = (): React.ReactElement => {
   return (
     <>
       <SectionTitle text="skills" />
-      <div>
-        HTML, CSS, JS, PHP, React, NextJs, TS, Laravel, AngularJs
-      </div>
+      <div>HTML, CSS, JS, PHP, React, NextJs, TS, Laravel, AngularJs</div>
     </>
   )
 }
