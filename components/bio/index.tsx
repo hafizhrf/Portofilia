@@ -12,7 +12,7 @@ const BioContainer = styled.div`
 
   @media (max-width: 992px) {
     width: 80%;
-    font-size: 10px;
+    font-size: 12px;
   }
 `
 
