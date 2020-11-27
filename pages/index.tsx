@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 import Bio from '../components/bio'
 import Skills from '../components/skills'
+import Projects from '../components/projects'
 
 const HiSection = styled.div`
   margin: 32px 0;
@@ -27,6 +28,7 @@ export default function Home(): React.ReactElement {
       <TitleText>Hafizh Rifqi Fabian</TitleText>
       <Bio text="I am a web programmer from Indonesia who really likes doing new things, I really like playing games or watching anime, still looking for experiences. Nice to meet you!" />
       <Skills />
+      <Projects />
     </Layout>
   )
 }
