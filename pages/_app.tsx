@@ -15,8 +15,8 @@ interface Props {
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#2FBBFF',
-      contrastText: '#ffffff',
+      main: '#fce973',
+      contrastText: '#000',
     },
   },
   typography: {
