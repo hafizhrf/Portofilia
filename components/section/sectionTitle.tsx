@@ -13,7 +13,7 @@ const TitleDecor = styled.div`
 `
 
 const SkillTitle = styled.div`
-  margin: 120px 0 32px;
+  margin: 80px 0 32px;
 
   &:hover ${TitleDecor} {
     left: 24px;
