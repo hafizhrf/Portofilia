@@ -27,6 +27,9 @@ const MenuOverlay = styled.div`
     left: unset;
     top: unset;
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
 `
 
 const MenuContainer = styled.div`
@@ -52,6 +55,7 @@ const MenuContent = styled.div`
   position: fixed;
   top: 46.8%;
   left: 100px;
+  z-index: 11;
 
   @media (max-width: 992px) {
     right: 18px;
