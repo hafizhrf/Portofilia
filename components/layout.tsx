@@ -15,6 +15,7 @@ const Content = styled(Container)`
   padding-top: 64px;
   min-height: calc(100vh);
   color: white;
+  padding-bottom: 64px;
   margin-bottom: 0 !important;
 `
 
