@@ -45,6 +45,7 @@ const ProjectGrid = styled(Grid)`
 `
 
 const CardGrid = styled(Grid)`
+  width: 100%;
   margin-bottom: 16px !important;
 `
 

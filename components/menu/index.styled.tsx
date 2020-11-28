@@ -21,14 +21,16 @@ const MenuOverlay = styled.div`
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 
-  @media (max-width: 992px) {
+  @media (min-width: 80px) and (max-width: 480px) {
     right: 8px;
     bottom: 8px;
     left: unset;
     top: unset;
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    top: 20px;
+    left: 46%;
   }
 `
 
@@ -40,13 +42,19 @@ const MenuContainer = styled.div`
   background: #f8e775;
   z-index: 10;
 
-  @media (max-width: 992px) {
+  @media (min-width: 80px) and (max-width: 480px) {
     width: 60px;
     height: 60px;
     right: 0;
     bottom: 0;
     top: unset;
     border-top-left-radius: 100%;
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    top: 0;
+    width: 100%;
+    height: 40px;
   }
 `
 
@@ -57,11 +65,17 @@ const MenuContent = styled.div`
   left: 100px;
   z-index: 11;
 
-  @media (max-width: 992px) {
+  @media (min-width: 80px) and (max-width: 480px) {
     right: 18px;
     bottom: 72px;
     left: unset;
     top: unset;
+    flex-direction: column;
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    top: 100px;
+    left: 46.8%;
     flex-direction: column;
   }
 `
@@ -83,7 +97,12 @@ const ContentButton = styled.div`
     color: #f8e775;
   }
 
-  @media (max-width: 992px) {
+  @media (min-width: 80px) and (max-width: 480px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
     margin-right: 0;
     margin-bottom: 20px;
   }
