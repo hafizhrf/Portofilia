@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SectionTitle from '../section/sectionTitle'
 import styled from 'styled-components'
 import { CardContent, Grid } from '@material-ui/core'
@@ -60,6 +60,39 @@ const SeeMore = styled.div`
 `
 
 const Projects = (): React.ReactElement => {
+  const [projectList] = useState([
+    {
+      name: 'Datahub.id',
+      url: 'https://dashboard.datahub.id',
+      image: '/images/datahub.png',
+      description: 'Field collecting data at ease',
+    },
+    {
+      name: 'Korone',
+      url: 'https://github.com/hafizhrf/korone',
+      image: '/images/korone.png',
+      description: 'Discord bot build with node.js & discord.js',
+    },
+    {
+      name: 'Regopantes B2B Dashboard',
+      url: '',
+      image: '/images/b2b.png',
+      description: 'Regopantes B2B dashboard built with react js',
+    },
+    {
+      name: 'Telkomsel SME',
+      url: 'https://99usahaku.telkomsel.com',
+      image: '/images/sme.png',
+      description: 'Telkomsel SME Website (99usahaku)',
+    },
+    {
+      name: 'SIP SMKN 1 KOTA BEKASI',
+      url: 'https://sip-smkn1.hoshimachi.bandy.id',
+      image: '/images/SIP.png',
+      description:
+        'Website inventaris buku serta pinjam meminjam buku baik buku fisik maupun dalam bentuk PDF, disertai dengan fitur tambahan seperti artikel',
+    },
+  ])
   const Redirect = (url: string): void => {
     window.open(url, '_blank')
   }
@@ -69,65 +102,22 @@ const Projects = (): React.ReactElement => {
       <SectionTitle text="projects" />
       <ProjectContainer>
         <ContainerDecor />
-        <ProjectGrid container spacing={2} justify="space-between">
-          <CardGrid item lg={3}>
-            <MCard onClick={() => Redirect('https://dashboard.datahub.id')}>
-              <CardActionArea style={{ height: '100%' }}>
-                <CardMedia src="/images/datahub.png" alt="Card" />
-                <MCardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Datahub.id
-                  </Typography>
-                  <CardContentText variant="body2">Field collecting data at ease</CardContentText>
-                </MCardContent>
-              </CardActionArea>
-            </MCard>
-          </CardGrid>
-          <CardGrid item lg={3}>
-            <MCard onClick={() => Redirect('https://github.com/hafizhrf/korone')}>
-              <CardActionArea style={{ height: '100%' }}>
-                <CardMedia src="/images/korone.png" alt="Card" />
-                <MCardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Korone
-                  </Typography>
-                  <CardContentText variant="body2">
-                    Discord bot build with node.js & discord.js
-                  </CardContentText>
-                </MCardContent>
-              </CardActionArea>
-            </MCard>
-          </CardGrid>
-          <CardGrid item lg={3}>
-            <MCard>
-              <CardActionArea style={{ height: '100%' }}>
-                <CardMedia src="/images/b2b.png" alt="Card" />
-                <MCardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Regopantes B2B Dashboard
-                  </Typography>
-                  <CardContentText variant="body2">
-                    Regopantes B2B dashboard built with react js
-                  </CardContentText>
-                </MCardContent>
-              </CardActionArea>
-            </MCard>
-          </CardGrid>
-          <CardGrid item lg={3}>
-            <MCard onClick={() => Redirect('https://99usahaku.telkomsel.com')}>
-              <CardActionArea style={{ height: '100%' }}>
-                <CardMedia src="/images/sme.png" alt="Card" />
-                <MCardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Telkomsel SME
-                  </Typography>
-                  <CardContentText variant="body2">
-                    Telkomsel SME Website (99usahaku)
-                  </CardContentText>
-                </MCardContent>
-              </CardActionArea>
-            </MCard>
-          </CardGrid>
+        <ProjectGrid container spacing={2}>
+          {projectList.map((project, key: number) => (
+            <CardGrid item lg={3} key={key}>
+              <MCard onClick={() => project.url && Redirect(project.url)}>
+                <CardActionArea style={{ height: '100%' }}>
+                  <CardMedia src={project.image} alt="Card" />
+                  <MCardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {project.name}
+                    </Typography>
+                    <CardContentText variant="body2">{project.description}</CardContentText>
+                  </MCardContent>
+                </CardActionArea>
+              </MCard>
+            </CardGrid>
+          ))}
         </ProjectGrid>
         <SeeMore onClick={() => Redirect('https://github.com/hafizhrf')}>
           <Button variant="contained" color="primary">
