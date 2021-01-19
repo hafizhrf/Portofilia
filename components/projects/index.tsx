@@ -88,7 +88,7 @@ const Projects = (): React.ReactElement => {
     {
       name: 'SIP SMKN 1 KOTA BEKASI',
       url: 'https://sip-smkn1.hoshimachi.bandy.id',
-      image: '/images/SIP.png',
+      image: '/images/sip.jpg',
       description:
         'Website inventaris buku serta pinjam meminjam buku baik buku fisik maupun dalam bentuk PDF, disertai dengan fitur tambahan seperti artikel',
     },

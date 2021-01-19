@@ -17,13 +17,13 @@ const BioContainer = styled.div`
 `
 
 interface Props {
-  text: string
+  children?: unknown
 }
 
-const SectionTitle = ({ text }: Props): React.ReactElement => {
+const SectionTitle = ({ children }: Props): React.ReactElement => {
   return (
     <>
-      <BioContainer>{text}</BioContainer>
+      <BioContainer>{children}</BioContainer>
     </>
   )
 }
