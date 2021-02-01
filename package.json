@@ -11,6 +11,8 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
+    "@sanity/client": "^2.1.4",
+    "@sanity/image-url": "^0.140.19",
     "bootstrap": "^4.5.2",
     "next": "9.3.5",
     "next-images": "^1.6.2",

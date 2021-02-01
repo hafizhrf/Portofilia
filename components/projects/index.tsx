@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useEffect, useState } from 'react'
 import SectionTitle from '../section/sectionTitle'
 import styled from 'styled-components'
 import { CardContent, Grid } from '@material-ui/core'
@@ -6,6 +7,8 @@ import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import Typography from '@material-ui/core/Typography'
+import { getProjects } from '../../services/project'
+import imageBuilder from '../../helpers/sanity/imageBuilder'
 
 const ProjectContainer = styled.div`
   width: 100%;
@@ -60,39 +63,50 @@ const SeeMore = styled.div`
 `
 
 const Projects = (): React.ReactElement => {
-  const [projectList] = useState([
-    {
-      name: 'Datahub.id',
-      url: 'https://dashboard.datahub.id',
-      image: '/images/datahub.png',
-      description: 'Field collecting data at ease',
-    },
-    {
-      name: 'Korone',
-      url: 'https://github.com/hafizhrf/korone',
-      image: '/images/korone.png',
-      description: 'Discord bot build with node.js & discord.js',
-    },
-    {
-      name: 'Regopantes B2B Dashboard',
-      url: '',
-      image: '/images/b2b.png',
-      description: 'Regopantes B2B dashboard built with react js',
-    },
-    {
-      name: 'Telkomsel SME',
-      url: 'https://99usahaku.telkomsel.com',
-      image: '/images/sme.png',
-      description: 'Telkomsel SME Website (99usahaku)',
-    },
-    {
-      name: 'SIP SMKN 1 KOTA BEKASI',
-      url: 'https://sip-smkn1.hoshimachi.bandy.id',
-      image: '/images/sip.jpg',
-      description:
-        'Website inventaris buku serta pinjam meminjam buku baik buku fisik maupun dalam bentuk PDF, disertai dengan fitur tambahan seperti artikel',
-    },
-  ])
+  const [projects, setprojects] = useState([])
+  const getData = async (): Promise<any> => {
+    const res = await getProjects()
+    setprojects(res)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  // const [projectList] = useState([
+  //   {
+  //     name: 'Datahub.id',
+  //     url: 'https://dashboard.datahub.id',
+  //     image: '/images/datahub.png',
+  //     description: 'Field collecting data at ease',
+  //   },
+  //   {
+  //     name: 'Korone',
+  //     url: 'https://github.com/hafizhrf/korone',
+  //     image: '/images/korone.png',
+  //     description: 'Discord bot build with node.js & discord.js',
+  //   },
+  //   {
+  //     name: 'Regopantes B2B Dashboard',
+  //     url: '',
+  //     image: '/images/b2b.png',
+  //     description: 'Regopantes B2B dashboard built with react js',
+  //   },
+  //   {
+  //     name: 'Telkomsel SME',
+  //     url: 'https://99usahaku.telkomsel.com',
+  //     image: '/images/sme.png',
+  //     description: 'Telkomsel SME Website (99usahaku)',
+  //   },
+  //   {
+  //     name: 'SIP SMKN 1 KOTA BEKASI',
+  //     url: 'https://sip-smkn1.hoshimachi.bandy.id',
+  //     image: '/images/sip.jpg',
+  //     description:
+  //       'Website inventaris buku serta pinjam meminjam buku baik buku fisik maupun dalam bentuk PDF, disertai dengan fitur tambahan seperti artikel',
+  //   },
+  // ])
+
   const Redirect = (url: string): void => {
     window.open(url, '_blank')
   }
@@ -103,11 +117,11 @@ const Projects = (): React.ReactElement => {
       <ProjectContainer>
         <ContainerDecor />
         <ProjectGrid container spacing={2}>
-          {projectList.map((project, key: number) => (
+          {projects.map((project, key: number) => (
             <CardGrid item lg={3} key={key}>
               <MCard onClick={() => project.url && Redirect(project.url)}>
                 <CardActionArea style={{ height: '100%' }}>
-                  <CardMedia src={project.image} alt="Card" />
+                  <CardMedia src={imageBuilder(project.image.asset._ref)} alt="Card" />
                   <MCardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       {project.name}
