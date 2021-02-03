@@ -63,7 +63,7 @@ const SeeMore = styled.div`
 `
 
 const Projects = (): React.ReactElement => {
-  const [projects, setprojects] = useState([])
+  const [projects, setprojects] = useState<Project[]>([])
   const getData = async (): Promise<any> => {
     const res = await getProjects()
     setprojects(res)
@@ -72,40 +72,6 @@ const Projects = (): React.ReactElement => {
   useEffect(() => {
     getData()
   }, [])
-
-  // const [projectList] = useState([
-  //   {
-  //     name: 'Datahub.id',
-  //     url: 'https://dashboard.datahub.id',
-  //     image: '/images/datahub.png',
-  //     description: 'Field collecting data at ease',
-  //   },
-  //   {
-  //     name: 'Korone',
-  //     url: 'https://github.com/hafizhrf/korone',
-  //     image: '/images/korone.png',
-  //     description: 'Discord bot build with node.js & discord.js',
-  //   },
-  //   {
-  //     name: 'Regopantes B2B Dashboard',
-  //     url: '',
-  //     image: '/images/b2b.png',
-  //     description: 'Regopantes B2B dashboard built with react js',
-  //   },
-  //   {
-  //     name: 'Telkomsel SME',
-  //     url: 'https://99usahaku.telkomsel.com',
-  //     image: '/images/sme.png',
-  //     description: 'Telkomsel SME Website (99usahaku)',
-  //   },
-  //   {
-  //     name: 'SIP SMKN 1 KOTA BEKASI',
-  //     url: 'https://sip-smkn1.hoshimachi.bandy.id',
-  //     image: '/images/sip.jpg',
-  //     description:
-  //       'Website inventaris buku serta pinjam meminjam buku baik buku fisik maupun dalam bentuk PDF, disertai dengan fitur tambahan seperti artikel',
-  //   },
-  // ])
 
   const Redirect = (url: string): void => {
     window.open(url, '_blank')
