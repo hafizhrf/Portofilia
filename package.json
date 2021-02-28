@@ -1,9 +1,19 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portofilia",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafizhrf/Portofilia.git"
+  },
+  "author": "Hafizh Rifqi Fabian <hafizhrf@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hafizhrf/Portofilia/issues"
+  },
+  "homepage": "https://hafizhrf.me",
   "scripts": {
     "dev": "next dev -p 8080",
+    "lint": "eslint --fix",
     "build": "next build",
     "start": "next start"
   },
