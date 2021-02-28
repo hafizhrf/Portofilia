@@ -1,3 +1,4 @@
+version: 2
 # Define the jobs we want to run for this project
 jobs:
   test:
