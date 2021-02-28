@@ -91,7 +91,7 @@ const ContentButton = styled.div`
   transition: ease-in-out 0.2s;
   border-radius: 50%;
   cursor: pointer;
-  display: ${({ visibility = true }: Props) => (visibility ? 'block' : 'none')};
+  opacity: ${({ visibility = true }: Props) => (visibility ? '1' : '0')};
 
   &:hover {
     color: #f8e775;
