@@ -17,6 +17,10 @@ const Content = styled(Container)`
   color: white;
   padding-bottom: 64px;
   margin-bottom: 0 !important;
+
+  @media (min-width: 1024px) and (max-width: 1422px) {
+    padding-left: 100px !important;
+  }
 `
 
 interface Props {
