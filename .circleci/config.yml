@@ -1,0 +1,12 @@
+# Define the jobs we want to run for this project
+jobs:
+  test:
+    steps:
+      - checkout
+      - run: npm run lint
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - test
