@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MenuOverlay, MenuContainer, MenuContent, ContentButton } from './index.styled'
 import MenuIcon from '@material-ui/icons/Menu'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
@@ -19,6 +19,20 @@ const LightTooltip = withStyles((theme: Theme) => ({
 
 const Menu = (): React.ReactElement => {
   const [visibility, setVisibility] = useState(false)
+  const [onBottom, setBottom] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (
+        Math.round(window.scrollY + window.innerHeight) + 40 >=
+        document.querySelector('html').scrollHeight
+      ) {
+        setBottom(true)
+      } else {
+        setBottom(false)
+      }
+    })
+  })
 
   const toggleVisibility = (): void => {
     setVisibility(!visibility)
@@ -30,11 +44,11 @@ const Menu = (): React.ReactElement => {
 
   return (
     <>
-      <MenuContainer />
-      <MenuOverlay onClick={toggleVisibility}>
+      <MenuContainer onBottom={onBottom} />
+      <MenuOverlay onBottom={onBottom} onClick={toggleVisibility}>
         {visibility ? <CloseIcon /> : <MenuIcon />}
       </MenuOverlay>
-      <MenuContent>
+      <MenuContent onBottom={onBottom}>
         <LightTooltip title="Github">
           <ContentButton
             onClick={() => redirectTo('https://github.com/hafizhrf')}
