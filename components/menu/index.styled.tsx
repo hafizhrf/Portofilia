@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface Props {
   visibility?: boolean
+  onBottom?: boolean
 }
 
 const MenuOverlay = styled.div`
@@ -23,7 +24,7 @@ const MenuOverlay = styled.div`
 
   @media (min-width: 80px) and (max-width: 480px) {
     right: 8px;
-    bottom: 8px;
+    bottom: ${({ onBottom = true }: Props) => (onBottom ? '70px' : '8px')};
     left: unset;
     top: unset;
   }
@@ -41,12 +42,13 @@ const MenuContainer = styled.div`
   top: 0;
   background: #f8e775;
   z-index: 10;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   @media (min-width: 80px) and (max-width: 480px) {
     width: 60px;
     height: 60px;
     right: 0;
-    bottom: 0;
+    bottom: ${({ onBottom = true }: Props) => (onBottom ? '60px' : '0')};
     top: unset;
     border-top-left-radius: 100%;
   }
@@ -64,10 +66,11 @@ const MenuContent = styled.div`
   top: 46.8%;
   left: 100px;
   z-index: 11;
+  transition: ease-in-out 0.2s;
 
   @media (min-width: 80px) and (max-width: 480px) {
     right: 18px;
-    bottom: 72px;
+    bottom: ${({ onBottom = true }: Props) => (onBottom ? '132px' : '72px')};
     left: unset;
     top: unset;
     flex-direction: column;
