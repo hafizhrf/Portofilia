@@ -65,9 +65,9 @@ const Menu = (): React.ReactElement => {
             <LinkedInIcon />
           </ContentButton>
         </LightTooltip>
-        <LightTooltip title="Email (hafizhrf@yahoo.com)">
+        <LightTooltip title="Email (hafizhrf@hafizhrf.me)">
           <ContentButton
-            onClick={() => redirectTo('mailto:hafizhrf@yahoo.com')}
+            onClick={() => redirectTo('mailto:hafizhrf@hafizhrf.me')}
             visibility={visibility}
           >
             <EmailIcon />
