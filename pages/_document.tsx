@@ -53,6 +53,10 @@ class MyDocument extends Document {
           <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 
           <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+          <meta name="description" content="Hafizh Rifqi Fabian personal website" />
+          <meta name="keywords" content="HTML, CSS, JavaScript, Frontend, Hiring, Developer, Indonesia" />
+          <meta name="author" content="Hafizh Rifqi Fabian" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta property="og:title" content="Hafizhrf" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://hafizhrf.vercel.app/" />
